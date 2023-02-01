@@ -1,0 +1,102 @@
+.navbar-SmartEV {
+    z-index: 2;
+}
+
+#map {
+    z-index: 1;
+}
+
+.div-navbar-SmartEV {
+    height: 10vh;
+}
+
+.search-input {
+    position: relative;
+}
+
+.search-input-dest {
+    position: relative;
+}
+
+.autocom-box {
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+    position: absolute;
+    top: 2.6em;
+    background: white;
+}
+
+.search-input.active .autocom-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocom-box li {
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.search-input.active .autocom-box li {
+    display: block;
+}
+
+.autocom-box li:hover {
+    background: #efefef;
+}
+
+
+/* partie recherche de la source  */
+
+.autocom-box-dest {
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+    position: absolute;
+    top: 2.6em;
+    background: white;
+}
+
+.search-input-dest.active .autocom-box-dest {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocom-box-dest li {
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.search-input-dest.active .autocom-box-dest li {
+    display: block;
+}
+
+.autocom-box-dest li:hover {
+    background: #efefef;
+}
+
+img.huechangered {
+    filter: hue-rotate(120deg);
+}
+
+img.huechangegreen {
+    filter: hue-rotate(250deg);
+}
+
+img.huechangepurple {
+    filter: hue-rotate(60deg);
+}

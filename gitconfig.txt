@@ -1,0 +1,21 @@
+
+
+# 1) Générer une clé
+ssh-keygen  -t ed25519 -C "yosko@yosko.net"
+# 2) Renseigner un chemin relatif et un nom, par exemple .ssh/yosko_github
+# 3) Vous pouvez laisser la passphrase vide
+ 
+# 4) ajoutez votre clé
+ssh-add .ssh/yosko_github
+# si erreur : vérifiez que seul VOUS pouvez lire la clé publique (et corrigez éventuellement avec chmod)
+ 
+# 5) copiez le contenu de la clé publique
+cat .ssh/yosko_github.pub
+ 
+# 6) ajoutez-là dans les paramètres de votre compte github dans la section "SSH & GPG Keys"
+# vous devriez pouvoir cloner des repos, mêmes privés, s'ils sont liés à votre compte Github
+ 
+# 7) configurez vos user name et email pour git avant votre premier commit
+git config --global user.name "Yosko"
+git config --global user.email "yosko@yosko.net"
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="css/search.css">
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="node_modules/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light navbar-SmartEV">
+        <div class="container-fluid div-navbar-SmartEV">
+            <a class="navbar-brand">
+                <img
+                    src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-electric-car-automobile-kiranshastry-lineal-color-kiranshastry-2.png" />
+                SmartEV
+            </a>
+
+            <div class="col-md-1">
+                <select class="form-select" id="selectCar">
+                    <option value="290" selected>Zoé</option>
+                    <option value="485">Tesla</option>
+                </select>
+              </div>
+            <!-- <select class="form-select" aria-label="Default select example" id="selectCar">
+                <option selected>Open this select menu</option>
+                <option value="1">Zoé</option>
+                <option value="2">Tesla</option>
+            </select> -->
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Afficher toutes les bornes de
+                    recharge</label>
+            </div>
+
+
+
+            <div class="search-input">
+                Départ :
+                <input id="searchbox-source" type="search" placeholder="Search Something..." aria-label="Search">
+                <div class="autocom-box">
+                    <!-- here list are inserted from javascript -->
+                </div>
+            </div>
+            <div class="search-input-dest">
+                <label for="end">Arrivée : </label>
+                <input id="searchbox-source-dest" name="end" disabled type="search" placeholder="Search Something..."
+                    aria-label="Search">
+                <div class="autocom-box-dest">
+                    <!-- here list are inserted from javascript -->
+                </div>
+            </div>
+            <div class="search-input-dest">
+                <button id="submit-itineraire" type="button">Itinéraire</button>
+            </div>
+
+        </div>
+
+    </nav>
+    <div id='instructions'></div> 
+
+
+    <div id="map"></div>
+
+</body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js">
+</script>
+<script src="js/map.js">
+</script>
+<script src="js/search.js"></script>
+
+</html> 

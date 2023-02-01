@@ -1,0 +1,27 @@
+#map { height: 85vh; }
+
+#instructions {
+    max-height: 280px;
+    overflow-y: auto;
+    position: absolute;
+    top: 2.6em;
+    background: white;
+    padding: 10px 8px;
+    margin-top: 15vh;
+    margin-left: 10vw;
+    visibility:hidden;
+    z-index: 3;
+    width: 20vw;
+    pointer-events: auto;
+}
+
+#instructions li {
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: block;
+    background: #efefef;
+margin: 3px;
+}
